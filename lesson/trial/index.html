@@ -1,0 +1,131 @@
+<!-- trial -->
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Noto+Serif+JP:wght@200..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+
+    <link rel="stylesheet" href="../../css/common/reset.css">
+    <link rel="stylesheet" href="../../css/common/common.css">
+    <link rel="stylesheet" href="../../css/common/under.css">
+    <link rel="stylesheet" href="../../css/page/trial.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <div class="header_inner">
+            <h1><a href="#"><img src="../../img/logo.svg" alt=""></a></h1>
+            <div class="hum_menu">
+                <span class="hum_menu_line"></span>
+                <span class="hum_menu_text">MENU</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">当店について</a></li>
+                    <li><a href="#">メニュー</a></li>
+                    <li><a href="#">お菓子教室</a></li>
+                    <li><a href="#">アクセス</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="under_title">
+        <div class="under_title_inner center">
+            <h2 class="contents_title">
+                <img class="sp" src="../../img/title_trial_sp.svg" alt="">
+                <img class="pc" src="../../img/title_trial_pc.svg" alt="">
+            </h2>
+        </div>
+    </div>
+
+    <section class="trial">
+        <div class="trial_inner">
+            <h3 class="page_title">無料体験お申込み</h3>
+            <div class="trial_form">
+                <form action="mail_send.php" method="post">
+                    <dl>
+                        <dt><label for="onamae">お名前</label></dt>
+                        <dd><input type="text" name="onamae" id="onamae"></dd>
+                    </dl>
+                    <dl>
+                        <dt><label for="email">メールアドレス</label></dt>
+                        <dd><input type="email" name="email" id="email"></dd>
+                    </dl>
+                    <dl>
+                        <dt><label for="child">お子さんの人数</label></dt>
+                        <dd>
+                            <select name="child" id="child">
+                                <option value="0人">0人</option>
+                                <option value="1人">1人</option>
+                                <option value="2人">2人</option>
+                                <option value="3人以上">3人以上</option>
+                            </select>
+                        </dd>
+                    </dl>
+                    <dl class="kibou">
+                        <dt>希望日</dt>
+                        <dd>
+                            <input type="radio" name="kibou" value="01月17日" id="kibou01">
+                            <label for="kibou01">01月17日</label><br>
+                            <input type="radio" name="kibou" value="01月18日" id="kibou02">
+                            <label for="kibou02">01月18日</label><br>
+                            <input type="radio" name="kibou" value="01月19日" id="kibou03">
+                            <label for="kibou03">01月19日</label>
+                        </dd>
+                    </dl>
+                    <dl class="cake">
+                        <dt>好きなケーキ</dt>
+                        <dd>
+                            <input type="checkbox" name="cake[]" value="ショートケーキ" id="cake01">
+                            <label for="cake01">ショートケーキ</label>
+                            <input type="checkbox" name="cake[]" value="チョコレートケーキ" id="cake02">
+                            <label for="cake02">チョコレートケーキ</label>
+                            <input type="checkbox" name="cake[]" value="チーズケーキ" id="cake03">
+                            <label for="cake03">チーズケーキ</label>
+                            <input type="checkbox" name="cake[]" value="モンブラン" id="cake04">
+                            <label for="cake04">モンブラン</label>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt><label for="message">メッセージ</label></dt>
+                        <dd>
+                            <textarea name="message" id="message"></textarea>
+                        </dd>
+                    </dl>
+
+                    <button>送信</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+
+
+    <footer>
+        <div class="footer_inner">
+            <img src="../../img/logo_white.svg" alt="洋菓子店CHALON">
+            <address>
+                TEL:03-1234-5678<br>
+                〒123-4567 東京都新宿区XXX
+            </address>
+            <small>&copy;CHALON</small>
+        </div>
+    </footer>
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="../../js/main.js"></script>
+</body>
+
+</html>

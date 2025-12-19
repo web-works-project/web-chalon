@@ -1,0 +1,340 @@
+@charset 'UTF-8';
+/*
+ブレイクポイント
+SP ～519px
+tab 520px ～ 959px（min-width:520px）
+PC 960px～（min-width:960px）
+*/
+
+/*===============
+MV
+===============*/
+.mv {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.mv video {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+
+/*===============
+key_title
+===============*/
+.key_title {
+    height: 150vh;
+}
+
+.key_title .key_title_inner {
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.key_title .key_title_inner img {
+    width: 90%;
+    max-width: 520px;
+    filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.5));
+}
+
+@media screen and (min-width:620px) {
+    .key_title .key_title_inner {
+        justify-content: end;
+        transform: translateX(calc(var(--gutter-base) * -10));
+    }
+}
+
+/*==========min-width:520px==========*/
+
+/*===============
+コンセプト
+===============*/
+.concept {
+    margin-bottom: 25vh;
+}
+
+.concept .concept_text {
+    color: #fff;
+    font-size: var(--size-lg);
+    padding-left: var(--contents-side-gutter);
+    padding-right: var(--contents-side-gutter);
+}
+
+.concept .concept_text p {
+    margin-bottom: var(--size-lg);
+}
+
+.concept .concept_img {
+    padding-left: var(--contents-side-gutter);
+    padding-right: var(--contents-side-gutter);
+}
+
+.concept .concept_img picture {
+    max-width: 500px;
+}
+
+@media screen and (min-width:960px) {
+    .concept {
+        margin-bottom: 35vh;
+    }
+
+    .concept .concept_inner {
+        display: flex;
+    }
+
+    .concept .concept_img picture {
+        position: sticky;
+        top: calc(100vh - 375px - var(--gutter-base)*3);
+    }
+
+}
+
+/*==========min-width:960px==========*/
+
+/*=================
+スクロール
+==================*/
+.scroll_down {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: -1;
+}
+
+.scroll_down .arrow_down {
+    width: 8px;
+    height: 8px;
+    display: block;
+    border-top: 2px solid #fff;
+    border-right: 2px solid #fff;
+    transform: rotate(135deg);
+}
+
+.scroll_down::before {
+    content: "";
+    width: 2px;
+    height: 90px;
+    display: block;
+    background-color: #fff;
+    position: absolute;
+    top: -81px;
+    left: calc(50% - 1px);
+    animation: arrow 1s cubic-bezier(1, 0, 0, 1) infinite;
+}
+
+@keyframes arrow {
+    0% {
+        transform: scaleY(0);
+        transform-origin: center 0%;
+    }
+
+    50% {
+        transform: scaleY(1);
+        transform-origin: center 0%;
+    }
+
+    51% {
+        transform: scaleY(1);
+        transform-origin: center 100%;
+    }
+
+    100% {
+        transform: scaleY(0);
+        transform-origin: center 100%;
+    }
+}
+
+
+/*=================
+メニュー
+==================*/
+.menu {
+    background-color: #fff;
+    padding: var(--section-gutter) 0;
+}
+
+.menu .slider {
+    margin-bottom: var(--contents-gutter);
+}
+
+.menu .slider li {
+    padding: 0 calc(var(--gutter-base)*2);
+}
+
+.menu .menu_text {
+    text-align: center;
+    margin-bottom: var(--contents-gutter);
+}
+
+@media screen and (min-width:960px) {
+    .menu {
+        padding: var(--section-gutter-pc) 0;
+    }
+
+    .menu .slider {
+        margin-bottom: var(--contents-gutter-pc);
+    }
+
+    .menu .menu_text {
+        margin-bottom: var(--contents-gutter-pc);
+    }
+}
+
+/*==========min-width:960px==========*/
+
+/*=================
+お菓子教室
+==================*/
+.lesson {
+    background-color: #fff;
+    padding-bottom: var(--section-gutter);
+}
+
+.lesson .lesson_inner {
+    padding: 0 var(--contents-side-gutter);
+}
+
+.lesson .lesson_text {
+    margin-bottom: var(--contents-gutter);
+}
+
+.lesson .lesson_img {
+    margin-bottom: var(--contents-gutter);
+}
+
+@media screen and (min-width:960px) {
+    .lesson {
+        padding-bottom: var(--section-gutter-pc);
+    }
+
+    .lesson .lesson_inner {
+        display: grid;
+        align-items: start;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        gap: calc(var(--gutter-base)*3);
+    }
+
+    .lesson .lesson_inner .lesson_img {
+        grid-column: 2/3;
+        grid-row: 1/4;
+    }
+
+    .lesson .lesson_inner .contents_title {
+        margin-bottom: 0;
+    }
+
+
+    .lesson_text {
+        margin-bottom: 0;
+    }
+
+}
+
+/*==========min-width:960px==========*/
+
+/*=================
+下の画像
+==================*/
+.bg_placeholder {
+    height: 350px;
+    /* 以下の指定ではスマホで動かないので */
+    /* background-image: url(../../img/top_showcase.webp);
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed; */
+}
+
+/* 以下の指定ではスマホで動かないので */
+.bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-image: url(../../img/top_showcase.webp);
+    z-index: -1;
+    background-size: cover;
+    display: none;
+}
+
+/* 以下の指定ではスマホで動かないので */
+.bg.on {
+    display: block;
+}
+
+/*=================
+お知らせ
+==================*/
+.news {
+    background-color: #fff;
+    padding-top: var(--section-gutter);
+    padding-bottom: var(--footer-gutter);
+}
+
+.news .news_inner {
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.news dl {
+    padding: 0 var(--contents-side-gutter);
+    margin-bottom: calc(var(--gutter-base)*2);
+}
+
+.news dl dd {
+    border-bottom: 2px dotted var(--main-color);
+    padding-bottom: var(--gutter-base);
+}
+
+.news dl dd a {
+    color: var(--main-color);
+}
+
+@media screen and (min-width:520px) {
+    .news dl {
+        display: flex;
+        border-bottom: 2px dotted var(--main-color);
+        padding: 0;
+        margin-left: calc(var(--gutter-base)*2);
+        margin-right: calc(var(--gutter-base)*2);
+    }
+
+    .news dl dt {
+        width: 30%;
+    }
+
+    .news dl dd {
+        border-bottom: none;
+        width: 70%;
+    }
+}
+
+/*==========min-width:520px==========*/
+
+
+@media screen and (min-width:960px) {
+    .news {
+        padding-top: var(--section-gutter-pc);
+    }
+}
+
+/*==========min-width:960px==========*/
+
+/*=================
+各タイトルの高さ
+==================*/
+.contents_title .sp {
+    height: 67px;
+}
+
+.contents_title .pc {
+    height: 135px;
+}

@@ -1,0 +1,31 @@
+@charset 'UTF-8';
+
+
+.access_inner {
+    padding: 0 var(--contents-side-gutter);
+}
+
+.access_inner .map_img {
+    margin-bottom: var(--contents-gutter);
+}
+
+.access_inner .map_address {
+    font-style: normal;
+    margin-bottom: var(--contents-gutter);
+}
+
+.access_inner .btn {
+    color: var(--accent-color);
+    border: 1px solid var(--accent-color);
+    margin-bottom: var(--contents-gutter);
+}
+
+.access_inner .map_text_title {
+    color: var(--main-color);
+}
+
+.access_inner ol {
+    border: 1px solid var(--accent-color);
+    margin: 0;
+    /* padding: 0%; */
+}

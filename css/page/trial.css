@@ -1,0 +1,108 @@
+@charset "UTF-8";
+
+/*
+ブレイクポイント
+SP ～519px
+tab 520px ～ 959px（min-width:520px）
+PC 960px～（min-width:960px）
+*/
+
+
+
+.trial .trial_inner {
+    padding: 0 var(--contents-side-gutter);
+}
+
+.trial .trial_form {
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+    padding: calc(var(--gutter-base)*5);
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.trial .trial_form dl {
+    margin-bottom: calc(var(--gutter-base)*3);
+}
+
+.trial .trial_form dl dt {
+    margin-bottom: var(--gutter-base);
+
+}
+
+.trial .trial_form dl dd input[type="text"],
+.trial .trial_form dl dd input[type="email"] {
+    width: 100%;
+    padding: var(--gutter-base);
+    border: 1px solid #ccc;
+}
+
+.trial .trial_form dl dd select {
+    padding: var(--gutter-base);
+    border: 1px solid #ccc;
+}
+
+.trial .trial_form dl dd textarea {
+    width: 100%;
+    padding: var(--gutter-base);
+    border: 1px solid #ccc;
+}
+
+.trial .trial_form .kibou label {
+    display: inline-block;
+    border: 1px solid var(--main-color);
+    padding: var(--gutter-base);
+    margin-bottom: var(--gutter-base);
+    color: var(--main-color);
+}
+
+.trial .trial_form .kibou input[type="radio"]:checked+label {
+    background-color: var(--main-color);
+    color: #fff;
+}
+
+.trial .trial_form .kibou input[type="radio"] {
+    display: none;
+}
+
+.trial .trial_form .cake label {
+    display: inline-block;
+    border: 1px solid var(--accent-color);
+    padding: var(--gutter-base);
+    margin-bottom: var(--gutter-base);
+    margin-right: var(--gutter-base);
+    color: var(--accent-color);
+}
+
+.trial .trial_form .cake input[type="checkbox"]:checked+label {
+    background-color: var(--accent-color);
+    color: #fff;
+}
+
+.trial .trial_form .cake input[type="checkbox"] {
+    display: none;
+}
+
+.trial .trial_form button {
+    border: 1px solid var(--main-color);
+    background-color: transparent;
+    color: var(--main-color);
+    display: block;
+    width: 100%;
+    height: 90px;
+    max-width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: calc(var(--gutter-base)*10);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+@media screen and (min-width:960px) {
+    .trial .trial_form button:hover {
+        background-color: var(--main-color);
+        color: #fff;
+    }
+}
+
+/* ========== min-width:960px ========== */

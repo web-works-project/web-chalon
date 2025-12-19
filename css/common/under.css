@@ -1,0 +1,67 @@
+@charset "UTF-8";
+
+/*
+ブレイクポイント
+SP ～519px
+tab 520px ～ 959px（min-width:520px）
+PC 960px～（min-width:960px）
+*/
+/*======================
+下層ページ上部タイトル
+======================*/
+.under_title {
+    background-image: url(../../img/top_lesson.jpg);
+    background-size: cover;
+    height: 40vh;
+    background-position: center center;
+    margin-bottom: var(--section-gutter);
+}
+
+.under_title_inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40vh;
+}
+
+.under_title .contents_title {
+    background-color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 0;
+    padding: calc(var(--gutter-base)*2) calc(var(--gutter-base)*4);
+}
+
+.page_title {
+    font-size: var(--size-xl);
+    font-weight: normal;
+    text-align: center;
+    margin-bottom: var(--section-gutter);
+    color: var(--main-color);
+    font-family: var(--font-serif);
+}
+
+@media screen and (min-width:960px) {
+    .under_title {
+        height: 500px;
+        margin-bottom: var(--section-gutter-pc);
+    }
+
+    .under_title_inner {
+        height: 500px;
+        justify-content: start;
+    }
+
+    .under_title .contents_title {
+        padding: calc(var(--gutter-base)*3) calc(var(--gutter-base)*6);
+    }
+
+    .page_title {
+        font-size: var(--size-xxl);
+        margin-bottom: var(--section-gutter-pc);
+    }
+}
+
+/*==========min-width:960px==========*/
+
+footer {
+    margin-top: var(--footer-gutter);
+}
